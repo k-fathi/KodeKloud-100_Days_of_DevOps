@@ -157,9 +157,3 @@ Using `-p` with `useradd` (even with `openssl`) leaves traces in the bash histor
 
 
 ### **KodeKloud 100 Days of DevOps:** [**Here**](https://engineer.kodekloud.com/practice)
-
-
-
-<style>
-body{font-size: 16px;}
-</style>
