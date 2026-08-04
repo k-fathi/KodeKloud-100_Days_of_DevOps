@@ -54,7 +54,3 @@ I'm **Karim Fathy Abd El-Hady**. Let's connect and talk about Linux, Automation,
 <div align="center">
   <i>"Don't just run commands, understand the architecture."</i>
 </div>
-
-<style>
-body{font-size: 16px;}
-</style>
