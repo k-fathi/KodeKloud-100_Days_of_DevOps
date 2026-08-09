@@ -1,5 +1,5 @@
 <div align="left">
-  <img src="../images/0.png" width="120" height="120" alt="KodeKloud icon"/>
+  <img src="../images/0.png" width="120" height="120" alt="KodeKloud icon" align="right" />
   <h1>Day_005 | SELinux Fundamentals: DAC vs MAC</h1>
 </div>
 
@@ -100,6 +100,12 @@ sudo restorecon -v /var/www/html/index.html
 The file's context is corrected in place, and the `403` disappears immediately.
 
 > **Discussion:** For a deployment script that runs `mv` on many files daily, how do you guarantee `restorecon` always runs afterward automatically, instead of relying on remembering to do it manually every time?
+
+---
+
+## Deep Dive References
+
+*   [**SELinux Security and Concepts**](https://github.com/k-fathi/learn-DevOps-tools/blob/main/01_Learn-Linux/Admin_2/SELinux.md): Explore comprehensive guides on configuring, troubleshooting, and understanding SELinux policies and contexts.
 
 ---
 

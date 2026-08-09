@@ -1,5 +1,5 @@
 <div align="left">
-  <img src="../images/0.png" width="120" height="120" alt="KodeKloud icon"/>
+  <img src="../images/0.png" width="120" height="120" alt="KodeKloud icon" align="right" />
   <h1>Day_007 | Password-less SSH and Bastion Hosts</h1>
 </div>
 

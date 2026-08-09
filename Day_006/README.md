@@ -55,6 +55,12 @@ A common pitfall when writing automated scripts that require root permissions is
 
 ---
 
+## Deep Dive References
+
+*   [**Scheduling Tasks**](https://github.com/k-fathi/learn-DevOps-tools/blob/main/02_Learn-Bash/English_Version/23_Schaduling.md): Detailed notes on configuring cron jobs, understanding the `crontab` syntax, and troubleshooting scheduling issues in Linux.
+
+---
+
 ### **KodeKloud 100 Days of DevOps:** [**Here**](https://engineer.kodekloud.com/practice)
 
 ### **Main Learning Repository:** [**learn-DevOps-tools**](https://github.com/k-fathi/learn-DevOps-tools)
