@@ -1,5 +1,5 @@
 <div align="left">
-  <img src="../images/0.png" width="120" height="120" alt="KodeKloud icon" align="right" style="border-radius: 50%;" />
+  <img src="../images/0.png" width="120" height="120" alt="KodeKloud icon" align="right"/>
   <h1>Day_002 | Account Expiry and Unix Epoch Time</h1>
 </div>
 
@@ -8,7 +8,7 @@
 - [Core Concepts (Theoretical Background)](#core-concepts-theoretical-background)
   - [The Unix Epoch Time](#the-unix-epoch-time)
   - [The Y2K38 Problem](#the-y2k38-problem)
-- [Execution Steps](#execution-steps)
+- [Lab Solution & Commands](#lab-solution--commands)
 - [Key Learnings & Notes](#key-learnings--notes)
 
 ---
@@ -37,7 +37,7 @@ On **January 19, 2038, at 03:14:07 UTC**, this counter will overflow. The next s
 
 ---
 
-## Execution Steps
+## Lab Solution & Commands
 
 ### Setting the Expiry Date
 To create a new user and set the account expiration date to `2027-02-17`, we use the `useradd` command with the `-e` (expire) flag:
@@ -84,4 +84,12 @@ sudo chage -l kareem
 
 ---
 
+## Deep Dive References
+
+*   [**Passwords Management**](https://github.com/k-fathi/learn-DevOps-tools/blob/main/01_Learn-Linux/Admin_1/14_Passwords_Management.md): Learn the mechanisms behind password policies, account expiration, and how Linux handles authentication credentials.
+
+---
+
 ### **KodeKloud 100 Days of DevOps:** [**Here**](https://engineer.kodekloud.com/practice)
+
+### **Main Learning Repository:** [**learn-DevOps-tools**](https://github.com/k-fathi/learn-DevOps-tools)

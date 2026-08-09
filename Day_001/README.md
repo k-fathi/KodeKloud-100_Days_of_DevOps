@@ -1,5 +1,5 @@
 <div align="left">
-  <img src="../images/0.png" width="120" height="120" alt="KodeKloud icon" align="right" style="border-radius: 50%;" />
+  <img src="../images/0.png" width="120" height="120" alt="KodeKloud icon" align="right"/>
   <h1>Day_001 | User Setup with Non-Interactive Shell</h1>
 </div>
 
@@ -9,7 +9,7 @@
 - [Core Concepts (Theoretical Background)](#core-concepts-theoretical-background)
   - [Shell Classifications](#shell-classifications)
   - [System Shells for Restricted Users (/nologin vs /false)](#system-shells-for-restricted-users-nologin-vs-false)
-- [Execution Steps](#execution-steps)
+- [Lab Solution & Commands](#lab-solution--commands)
 - [Key Learnings & Notes](#key-learnings--notes)
 - [Security Best Practices](#security-best-practices)
 
@@ -61,7 +61,7 @@ When creating a user without passing the `-s` flag to specify a custom shell, Li
 
 ---
 
-## Execution Steps
+## Lab Solution & Commands
 
 ### The Intuitive (But Wrong) Approach:
 Initially, I tried creating the user and setting the password using the `-p` flag directly:
@@ -100,7 +100,6 @@ sudo useradd -s /usr/sbin/nologin -p "$(openssl passwd -6 'strongPassword')" kar
 ## Key Learnings & Notes
 
 *   **Authentication Flow:** Linux never encrypts passwords; it **hashes** them. Encryption is **two-way** (can be decrypted), but Hashing is **one-way**. Linux hashes your input during login and compares it to the stored hash in `/etc/shadow`.
-
 ```text
 +---------------------+
 |      User Input     |
@@ -137,11 +136,9 @@ sudo useradd -s /usr/sbin/nologin -p "$(openssl passwd -6 'strongPassword')" kar
 +----------+    +-----------------------+
 ```
 
-
 *   **Hash Identification:** How does Linux know which algorithm to use during login? It leaves a marker at the beginning of the hash in `/etc/shadow`. For example, `$6$` means SHA-512, and `$1$` means **MD5**.
 
 *  **Salt Usage:** Linux uses a **salt** (random string) to make the hash unique, even if two users have the same password. This prevents attackers from using precomputed hash tables (like rainbow tables) to crack passwords.
-
 ---
 
 
@@ -155,5 +152,14 @@ Using `-p` with `useradd` (even with `openssl`) leaves traces in the bash histor
 
 ---
 
+## Deep Dive References
 
+*   [**Terminals and Shells in Linux**](https://github.com/k-fathi/learn-DevOps-tools/blob/main/01_Learn-Linux/Admin_1/00_Terminals_and_Shells_in_Linux.md): Understand the fundamental differences between terminals, shells, and how environments differ across login and non-interactive sessions.
+*   [**Shell files and Scripts**](https://github.com/k-fathi/learn-DevOps-tools/blob/main/01_Learn-Linux/Admin_1/11_Shell_files_and_Scripts.md): Learn about how bash configuration files and profile scripts orchestrate user sessions.
+*   [**Managing Local Users**](https://github.com/k-fathi/learn-DevOps-tools/blob/main/01_Learn-Linux/Admin_1/12_Managing_Local_Users.md): Discover how Linux handles users, permissions, and the system tools used for complete local user administration.
+
+---
+t
 ### **KodeKloud 100 Days of DevOps:** [**Here**](https://engineer.kodekloud.com/practice)
+
+### **Main Learning Repository:** [**learn-DevOps-tools**](https://github.com/k-fathi/learn-DevOps-tools)

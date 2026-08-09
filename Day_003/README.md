@@ -1,12 +1,12 @@
 <div align="left">
-  <img src="../images/0.png" width="120" height="120" alt="KodeKloud icon" align="right" style="border-radius: 50%;" />
+  <img src="../images/0.png" width="120" height="120" alt="KodeKloud icon" align="right"/>
   <h1>Day_003 | Disable Direct SSH Root Login</h1>
 </div>
 
 ## Outlines
 - [Task Objective](#the-objective-of-this-lab-is-to)
 - [Core Concepts (Theoretical Background)](#core-concepts-theoretical-background)
-- [Execution Steps](#execution-steps)
+- [Lab Solution & Commands](#lab-solution--commands)
 - [Bonus: Simplify Connections with SSH Config](#bonus-simplify-connections-with-ssh-config)
 
 ---
@@ -37,7 +37,7 @@ The `PermitRootLogin` directive in the SSH daemon configuration (`sshd_config`) 
 
 ---
 
-## Execution Steps
+## Lab Solution & Commands
 
 For this lab, the requirement was to apply this policy across **3 Application Servers** in the datacenter.
 
@@ -99,4 +99,12 @@ The SSH client parses the `~/.ssh/config` file sequentially from **Top to Bottom
 
 ---
 
+## Deep Dive References
+
+*   [**Configuring and Securing SSH**](https://github.com/k-fathi/learn-DevOps-tools/blob/main/01_Learn-Linux/Admin_1/24_Configuring_and_Securing_SSH.md): Explore advanced SSH configuration techniques, hardening strategies, and managing secure remote connections effectively.
+
+---
+
 ### **KodeKloud 100 Days of DevOps:** [**Here**](https://engineer.kodekloud.com/practice)
+
+### **Main Learning Repository:** [**learn-DevOps-tools**](https://github.com/k-fathi/learn-DevOps-tools)
